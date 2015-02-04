@@ -21,6 +21,21 @@ namespace MyRCP
              registration.GoToRegistrationPage("https://rcp:C0mmun!ty@myrcpuat.rcplondon.ac.uk/user/register");
         }
 
+        [Given(@"I fill in my RCP code with ""(.*)""")]
+        public void GivenIFillInMyRCPCodeWith(int rcpCode)
+        {
+            var registration1 = new RegistrationPage(WebBrowser.Current);
+            registration1.enterRcpCode(rcpCode);
+        }
+
+        [Given(@"I fill in my email address with ""(.*)""")]
+        public void GivenIFillInMyEmailAddressWith(string emailAddress)
+        {
+            var registration1 = new RegistrationPage(WebBrowser.Current);
+            registration1.enterEmail(emailAddress);
+        }
+
+
         [Given(@"I have entered my details")]
         public void GivenIHaveEnteredMyDetails()
         {
@@ -85,6 +100,12 @@ namespace MyRCP
             RegistrationSRP.ValidateBlancEmail();
         }
 
+        [Then(@"I am warned that the email address is already registered")]
+        public void ThenIAmWarnedThatTheEmailAddressIsAlreadyRegistered()
+        {
+            var RegistrationSRP = new RegistrationResultsPage(WebBrowser.Current);
+            RegistrationSRP.validateExistingEmail();
+        }
 
         //Succesful login
 
@@ -93,7 +114,9 @@ namespace MyRCP
         {
 
             var registration1 = new RegistrationPage(WebBrowser.Current);
-            var nextUserNumberToAppend = TestDataGlobals.GetNextTestUser().ToString();
+            //var nextUserNumberToAppend = TestDataGlobals.GetNextTestUser().ToString();
+            Random rnd = new Random();
+            int nextUserNumberToAppend = rnd.Next(1, 999999999);
 
             foreach (var row in table.Rows)
             {

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1015]C:\Users\SimonKnight\Workspace\MyRCP\MyRCP\bin\Debug\MyRCP.dll</TopNode>
-  <SelectedNode>[0-1014]MyRCP.Features.VerifyMandatoryDetailsFeature.AUserAppliesForAnAffiliateMembershipOnline</SelectedNode>
+  <TopNode>[0-1017]C:\Users\SimonKnight\Workspace\MyRCP\MyRCP\bin\Debug\MyRCP.dll</TopNode>
+  <SelectedNode>[0-1013]MyRCP.Features.RegistrationFeature.RegisterWithCorrectDetails</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1015]C:\Users\SimonKnight\Workspace\MyRCP\MyRCP\bin\Debug\MyRCP.dll" Expanded="true" />
-    <Node UniqueName="[0-1016]MyRCP" Expanded="true" />
-    <Node UniqueName="[0-1017]MyRCP.Features" Expanded="true" />
+    <Node UniqueName="[0-1017]C:\Users\SimonKnight\Workspace\MyRCP\MyRCP\bin\Debug\MyRCP.dll" Expanded="true" />
+    <Node UniqueName="[0-1018]MyRCP" Expanded="true" />
+    <Node UniqueName="[0-1019]MyRCP.Features" Expanded="true" />
     <Node UniqueName="[0-1000]MyRCP.Features.LoginFeature" Expanded="true" />
     <Node UniqueName="[0-1005]MyRCP.Features.LogoutFeature" Expanded="true" />
     <Node UniqueName="[0-1007]MyRCP.Features.ModifyContactDetailsFeature" Expanded="true" />
     <Node UniqueName="[0-1009]MyRCP.Features.RegistrationFeature" Expanded="true" />
-    <Node UniqueName="[0-1013]MyRCP.Features.VerifyMandatoryDetailsFeature" Expanded="true" />
+    <Node UniqueName="[0-1015]MyRCP.Features.VerifyMandatoryDetailsFeature" Expanded="true" />
   </Nodes>
 </VisualState>

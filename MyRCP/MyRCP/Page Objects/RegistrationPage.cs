@@ -82,5 +82,12 @@ namespace MyRCP.Page_Objects
             // });
         }
 
+
+        internal void enterRcpCode(int rcpCode)
+        {
+            IWebElement rcpCodeField = WebBrowser.Current.FindElement(By.Id("edit-field-rcp-code-number-und-0-value"));
+            rcpCodeField.SendKeys(rcpCode.ToString());
+        }
+
     }
 }

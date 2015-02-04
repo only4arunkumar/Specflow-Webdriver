@@ -30,18 +30,26 @@ When I press Create new account
 Then I am warned that the email is required 
 
 
-#@SuccesfulRegistration
-#Scenario: Register with correct details 
-#Given I have navigated to the "MY RCP" Registration page
-#And I fill in the following:
-#| Title | Firstname   | Lastname    | E-mailaddress     | Password | Confirm Password |
-#| DR    | RCPFnameAut | RCPLnameAut | rcpautomationuser+ | password | password         |
-#When I press Create new account
-#Then A welcome email with further instuctions is sent  
-# 
+@SuccesfulRegistration
+Scenario: Register with correct details 
+	Given I have navigated to the "MY RCP" Registration page
+	And I fill in the following:
+	| Title | Firstname   | Lastname    | E-mailaddress			| Password | Confirm Password |
+	| DR    | RCPFnameAut | RCPLnameAut | rcpautomationuser+	| password | password         |
+	When I press Create new account
+	Then A welcome email with further instuctions is sent  
+ 
 
-@SuccesfulActivation
-Background: 
+@RCPcodeNonMatchingEmail
+Scenario: Register with an existing rcp(300551) - CRM matching details but does not match the email    
+	Given I have navigated to the "MY RCP" Registration page
+	And I have entered my details 
+	And I fill in my RCP code with "300551"
+	And I fill in my email address with "rcptest3+202@gmail.com"
+	When I press Create new account
+	Then I am warned that the email address is already registered
+
+
 
 
 

@@ -45,23 +45,30 @@ namespace MyRCP.Page_Objects
         public void ValidateSuccesfulRegistration()
         {
             //Check that a message display message is what we are excpecting - This should indicate that user has been created but has not been approved yet  
-
-            try
-            {
-                Assert.IsTrue((WebBrowser.Current.PageSource.Contains("A welcome message with further instructions has been sent to your e-mail address.")));
+            Assert.IsTrue((WebBrowser.Current.PageSource.Contains("A welcome message with further instructions has been sent to your e-mail address.")));
+            //try
+            //{
+            //    Assert.IsTrue((WebBrowser.Current.PageSource.Contains("A welcome message with further instructions has been sent to your e-mail address.")));
                 
-                //increment the user
-                TestDataGlobals.IncrementLastUser();
-            }
+            //    //increment the user
+            //    TestDataGlobals.IncrementLastUser();
+            //}
 
-            catch (AssertionException)
+            //catch (AssertionException)
 
-            {
-                throw;
+            //{
+            //    throw;
             
-            }
+            //}
            
         }
-       
+
+
+        internal void validateExistingEmail()
+        {
+            //Check that the correct display message is what we are excpecting 
+            Assert.IsTrue((WebBrowser.Current.PageSource.Contains("The e-mail address")));
+            Assert.IsTrue((WebBrowser.Current.PageSource.Contains("is already registered")));             
+        }
     }
 }
